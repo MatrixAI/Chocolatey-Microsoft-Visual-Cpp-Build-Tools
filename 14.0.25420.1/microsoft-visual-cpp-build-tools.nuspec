@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>microsoft-visual-cpp-build-tools</id>
+    <version>14.0.25420.1</version>
+    <title>Microsoft Visual C++ Build Tools 2015</title>
+    <authors>Microsoft Corporation</authors>
+    <owners>CMCDragonkai</owners>
+    <packageSourceUrl>https://github.com/MatrixAI/Chocolatey-Microsoft-Visual-Cpp-Build-Tools</packageSourceUrl>
+    <licenseUrl>https://www.visualstudio.com/license-terms/mt644918/</licenseUrl>
+    <projectUrl>http://landinghub.visualstudio.com/visual-cpp-build-tools</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/KennethB/Chocolatey-Packages/master/icons/VS2015.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>### Overview
+This provides with tools that allow you to build C and C++ libraries and applications targeting Windows desktop.
+They are the same tools that you find in Visual Studio 2015 if you removed the IDE.
+
+### Options
+The default installation also installs Windows 8.1 SDK and MSBuild. 
+There is a `/Full` option that installs all optional features, and `/InstallSelectableItems 'item1;item2;itemN'` option for selecting optional features.
+The current optional features are:
+	
+1. `Win81SDK_CppBuildSKUV1` - Windows 8.1 SDK
+2. `Win10SDK_VisibleV1` - Windows 10 SDK
+3. `VisualCppBuildTools_ATLMFC_SDK` - ATL and MFC
+4. `VisualCppBuildTools_NETFX_SDK` - .NET SDK
+
+These option ids can change in the future, and you need to check the installation logs to find new ids.
+
+Example: 
+
+```
+choco install microsoft-visual-cpp-build-tools --installargs "/InstallSelectableItems 'Win81SDK_CppBuildSKUV1;Win10SDK_VisibleV1;VisualCppBuildTools_NETFX_SDK'"`
+```
+
+If you're using OneGet/PackageManagement, try this instead:
+
+```
+Install-Package -Name visual-cpp-build-tools -ProviderName chocolateyget -Force -AdditionalArguments @'
+--installargs "/InstallSelectableItems 'Win81SDK_CppBuildSKUV1;Win10SDK_VisibleV1;VisualCppBuildTools_NETFX_SDK'"
+'@
+```
+
+### Notes
+This will install MSBuild as well, so there's no need to install the Microsoft Build Tools 2015 separately.
+This means you get C# compiler and interpreter as well as Visual Basic compiler. 
+    </description>
+    <summary>Standalone compiler, libraries and scripts for Visual C++.</summary>
+    <releaseNotes>https://blogs.msdn.microsoft.com/vcblog/2016/03/31/announcing-the-official-release-of-the-visual-c-build-tools-2015/</releaseNotes>
+    <tags>Microsoft Visual C++ Build Tools 2015 Compiler</tags>
+    <dependencies>
+      <dependency id="dotnet4.5.2" />
+    </dependencies>
+  </metadata>
+</package>
