@@ -47,7 +47,7 @@ This means you get C# compiler and interpreter as well as Visual Basic compiler.
     </description>
     <summary>Standalone compiler, libraries and scripts for Visual C++.</summary>
     <releaseNotes>https://blogs.msdn.microsoft.com/vcblog/2016/03/31/announcing-the-official-release-of-the-visual-c-build-tools-2015/</releaseNotes>
-    <tags>Microsoft Visual C++ Build Tools 2015 Compiler</tags>
+    <tags>Microsoft Visual C++ Build Tools 2015 Compiler admin</tags>
     <dependencies>
       <dependency id="dotnet4.5.2" />
     </dependencies>
